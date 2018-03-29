@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45ADC638-BE45-4699-ADFC-78C3E020D07A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QIC.Sport.Stats.Collector.Cache</RootNamespace>
+    <AssemblyName>QIC.Sport.Stats.Collector.Cache</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseCacheEntity.cs" />
+    <Compile Include="BaseCacheManager.cs" />
+    <Compile Include="CacheDataManager\LeagueEntityManager.cs" />
+    <Compile Include="CacheDataManager\MatchEntityManager.cs" />
+    <Compile Include="CacheDataManager\PlayerEntityManager.cs" />
+    <Compile Include="CacheDataManager\PlayerStatisticsRecordManager.cs" />
+    <Compile Include="CacheDataManager\PlayerTimeRecordManager.cs" />
+    <Compile Include="CacheDataManager\PlayerPenaltiesManager.cs" />
+    <Compile Include="CacheDataManager\SeasonEntityManager.cs" />
+    <Compile Include="CacheDataManager\SeasonTableInfoManager.cs" />
+    <Compile Include="CacheDataManager\SeasonTeamsManager.cs" />
+    <Compile Include="CacheDataManager\SeasonTypeInfoManager.cs" />
+    <Compile Include="CacheDataManager\TeamEntityManager.cs" />
+    <Compile Include="CacheDataManager\TeamPlayersManager.cs" />
+    <Compile Include="CacheData\LeagueEntity.cs" />
+    <Compile Include="CacheDataManager\OrganizerEntityManager.cs" />
+    <Compile Include="CacheData\MatchEntity.cs" />
+    <Compile Include="CacheData\MatchResultEntity.cs" />
+    <Compile Include="CacheData\OrganizerEntity.cs" />
+    <Compile Include="CacheData\PlayerEntity.cs" />
+    <Compile Include="CacheData\PlayerStatisticsRecord.cs" />
+    <Compile Include="CacheData\PlayerTimeRecord.cs" />
+    <Compile Include="CacheData\SeasonEntity.cs" />
+    <Compile Include="CacheData\SeasonPalyers.cs" />
+    <Compile Include="CacheData\SeasonTableInfo.cs" />
+    <Compile Include="CacheData\SeasonTeams.cs" />
+    <Compile Include="CacheData\SeasonTypeInfo.cs" />
+    <Compile Include="CacheData\TeamEntity.cs" />
+    <Compile Include="CacheData\TeamPlayers.cs" />
+    <Compile Include="CombinedData\Rank.cs" />
+    <Compile Include="CombinedData\PlayerPenalties.cs" />
+    <Compile Include="ICacheManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
